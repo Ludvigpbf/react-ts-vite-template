@@ -1,0 +1,178 @@
+.tooltip-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  margin: 0.5rem;
+}
+.tooltip-container:hover {
+  opacity: 0.8;
+}
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip-container .tooltip-text {
+  visibility: visible;
+  background-color: rgb(89, 89, 89);
+  font-size: 10px;
+  text-wrap: nowrap;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+.header .menu-container {
+  position: relative;
+}
+.header .menu-container button.toggle-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  order: 3;
+  margin: 1rem;
+  padding: 0.6rem;
+}
+@media screen and (max-width: 699px) {
+  .header .menu-container button.toggle-button {
+    padding: 0.5rem;
+  }
+}
+.header .menu-container button.toggle-button .bar {
+  width: 100%;
+  height: 0.1rem;
+  background-color: rgb(209, 209, 209);
+  transition: 0.3s;
+}
+.header .menu-container button.toggle-button .bar:first-child {
+  transform: translateY(2px);
+  width: 80%;
+}
+.header .menu-container button.toggle-button .bar:last-child {
+  transform: translateY(-2px);
+  width: 60%;
+}
+.header .menu-container button.toggle-button.open .bar:first-child {
+  transform: translateY(0.5rem) rotate(45deg);
+  width: 100%;
+}
+.header .menu-container button.toggle-button.open .bar:last-child {
+  transform: translateY(-0.7rem) rotate(-45deg);
+  width: 100%;
+}
+.header .menu-container button.toggle-button.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.light-mode {
+  background-color: rgb(233, 233, 233);
+}
+
+.dark-mode {
+  background-color: rgb(33, 33, 33);
+}
+
+body {
+  margin: 0;
+  background-color: rgb(39, 39, 39);
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  color: rgb(225, 225, 225);
+}
+body .page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+body .about-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body footer {
+  background-color: rgb(55, 55, 55);
+  color: rgb(225, 225, 225);
+  width: 100%;
+}
+body footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body footer .footer-content .footer-list .page-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body footer .footer-content .footer-list .page-links li a {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+body footer .footer-content .footer-list .page-links li a:hover {
+  color: rgb(164, 164, 164);
+}
+body footer .footer-content .footer-list h3 {
+  font-size: 1.3rem;
+}
+body footer .footer-content .footer-list ul {
+  list-style: none;
+  padding: 0;
+}
+body footer span {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  padding-bottom: 0.5rem;
+}
+
+.nav {
+  background-color: rgb(61, 61, 61);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.2rem;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+}
+
+.copyright-icon {
+  width: 0.8rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+a {
+  color: rgb(217, 217, 217);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}/*# sourceMappingURL=App.css.map */
